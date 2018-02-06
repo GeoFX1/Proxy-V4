@@ -167,6 +167,13 @@
         Dim Display As New Connect
         pnlMenuDisplay.Controls.Clear()
         pnlMenuDisplay.Controls.Add(Display)
+
+        UserSelectedMenu = "connect"
+        pnlConnect.BackColor = Color.FromArgb(45, 45, 48)
+        pnlSettings.BackColor = Color.FromArgb(63, 63, 70)
+        pnlUpdate.BackColor = Color.FromArgb(63, 63, 70)
+        pnlHelp.BackColor = Color.FromArgb(63, 63, 70)
+        pnlConsole.BackColor = Color.FromArgb(63, 63, 70)
     End Sub
     'Settings
     Private Sub pnlSettings_Click(sender As Object, e As EventArgs) Handles pnlSettings.Click
@@ -185,6 +192,13 @@
         Dim Display As New Settings
         pnlMenuDisplay.Controls.Clear()
         pnlMenuDisplay.Controls.Add(Display)
+
+        UserSelectedMenu = "settings"
+        pnlConnect.BackColor = Color.FromArgb(63, 63, 70)
+        pnlSettings.BackColor = Color.FromArgb(45, 45, 48)
+        pnlUpdate.BackColor = Color.FromArgb(63, 63, 70)
+        pnlHelp.BackColor = Color.FromArgb(63, 63, 70)
+        pnlConsole.BackColor = Color.FromArgb(63, 63, 70)
     End Sub
     'Update
     Private Sub pnlUpdate_Click(sender As Object, e As EventArgs) Handles pnlUpdate.Click
@@ -203,6 +217,13 @@
         Dim Display As New Update
         pnlMenuDisplay.Controls.Clear()
         pnlMenuDisplay.Controls.Add(Display)
+
+        UserSelectedMenu = "update"
+        pnlConnect.BackColor = Color.FromArgb(63, 63, 70)
+        pnlSettings.BackColor = Color.FromArgb(63, 63, 70)
+        pnlUpdate.BackColor = Color.FromArgb(45, 45, 48)
+        pnlHelp.BackColor = Color.FromArgb(63, 63, 70)
+        pnlConsole.BackColor = Color.FromArgb(63, 63, 70)
     End Sub
     'Help
     Private Sub pnlHelp_Click(sender As Object, e As EventArgs) Handles pnlHelp.Click
@@ -221,6 +242,13 @@
         Dim Display As New Help
         pnlMenuDisplay.Controls.Clear()
         pnlMenuDisplay.Controls.Add(Display)
+
+        UserSelectedMenu = "help"
+        pnlConnect.BackColor = Color.FromArgb(63, 63, 70)
+        pnlSettings.BackColor = Color.FromArgb(63, 63, 70)
+        pnlUpdate.BackColor = Color.FromArgb(63, 63, 70)
+        pnlHelp.BackColor = Color.FromArgb(45, 45, 48)
+        pnlConsole.BackColor = Color.FromArgb(63, 63, 70)
     End Sub
     'Console
     Private Sub pnlConsole_Click(sender As Object, e As EventArgs) Handles pnlConsole.Click
@@ -239,6 +267,13 @@
         Dim Display As New Console
         pnlMenuDisplay.Controls.Clear()
         pnlMenuDisplay.Controls.Add(Display)
+
+        UserSelectedMenu = "console"
+        pnlConnect.BackColor = Color.FromArgb(63, 63, 70)
+        pnlSettings.BackColor = Color.FromArgb(63, 63, 70)
+        pnlUpdate.BackColor = Color.FromArgb(63, 63, 70)
+        pnlHelp.BackColor = Color.FromArgb(63, 63, 70)
+        pnlConsole.BackColor = Color.FromArgb(45, 45, 48)
     End Sub
 #End Region
 End Class

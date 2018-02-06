@@ -37,6 +37,8 @@ Partial Class Form1
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pnlMenuDisplay = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.pnlConnect.SuspendLayout()
         Me.pnlSettings.SuspendLayout()
         Me.pnlUpdate.SuspendLayout()
@@ -44,6 +46,8 @@ Partial Class Form1
         Me.pnlConsole.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlMenuDisplay.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlConnect
@@ -179,10 +183,33 @@ Partial Class Form1
         '
         'pnlMenuDisplay
         '
+        Me.pnlMenuDisplay.Controls.Add(Me.Label1)
+        Me.pnlMenuDisplay.Controls.Add(Me.PictureBox3)
         Me.pnlMenuDisplay.Location = New System.Drawing.Point(-1, 55)
         Me.pnlMenuDisplay.Name = "pnlMenuDisplay"
         Me.pnlMenuDisplay.Size = New System.Drawing.Size(503, 222)
         Me.pnlMenuDisplay.TabIndex = 8
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(169, 5)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(158, 154)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 0
+        Me.PictureBox3.TabStop = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Lucida Sans Typewriter", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label1.Location = New System.Drawing.Point(134, 172)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(233, 25)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Geo Network Tools"
         '
         'Form1
         '
@@ -214,6 +241,9 @@ Partial Class Form1
         Me.pnlConsole.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlMenuDisplay.ResumeLayout(False)
+        Me.pnlMenuDisplay.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -233,4 +263,6 @@ Partial Class Form1
     Friend WithEvents Label6 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents pnlMenuDisplay As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents PictureBox3 As PictureBox
 End Class

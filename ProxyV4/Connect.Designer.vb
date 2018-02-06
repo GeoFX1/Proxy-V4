@@ -24,10 +24,10 @@ Partial Class Connect
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Connect))
-        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Wheelers Hill [Secure]")
-        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Wantirna College [Secure]")
-        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Unknown Server [Unsecure]")
-        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Australia", New System.Windows.Forms.TreeNode() {TreeNode5, TreeNode6, TreeNode7})
+        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Wheelers Hill [Secure]")
+        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Wantirna College [Secure]")
+        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Unknown Server [Unsecure]")
+        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Australia", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2, TreeNode3})
         Me.lblCounter = New System.Windows.Forms.Label()
         Me.btnDisconnect = New System.Windows.Forms.Button()
         Me.btnConnect = New System.Windows.Forms.Button()
@@ -41,6 +41,7 @@ Partial Class Connect
         Me.TreeView1 = New System.Windows.Forms.TreeView()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -143,15 +144,15 @@ Partial Class Connect
         Me.TreeView1.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(63, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.TreeView1.Location = New System.Drawing.Point(280, 46)
         Me.TreeView1.Name = "TreeView1"
-        TreeNode5.Name = "Node1"
-        TreeNode5.Text = "Wheelers Hill [Secure]"
-        TreeNode6.Name = "Node3"
-        TreeNode6.Text = "Wantirna College [Secure]"
-        TreeNode7.Name = "Node4"
-        TreeNode7.Text = "Unknown Server [Unsecure]"
-        TreeNode8.Name = "Node0"
-        TreeNode8.Text = "Australia"
-        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode8})
+        TreeNode1.Name = "Node1"
+        TreeNode1.Text = "Wheelers Hill [Secure]"
+        TreeNode2.Name = "Node3"
+        TreeNode2.Text = "Wantirna College [Secure]"
+        TreeNode3.Name = "Node4"
+        TreeNode3.Text = "Unknown Server [Unsecure]"
+        TreeNode4.Name = "Node0"
+        TreeNode4.Text = "Australia"
+        Me.TreeView1.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode4})
         Me.TreeView1.Size = New System.Drawing.Size(190, 100)
         Me.TreeView1.TabIndex = 36
         '
@@ -177,11 +178,22 @@ Partial Class Connect
         Me.Label2.TabIndex = 38
         Me.Label2.Text = "Manual:"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Lucida Sans Typewriter", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Location = New System.Drawing.Point(137, 46)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(54, 12)
+        Me.Label3.TabIndex = 39
+        Me.Label3.Text = "0.0.0.0"
+        '
         'Connect
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Transparent
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TreeView1)
@@ -215,4 +227,5 @@ Partial Class Connect
     Friend WithEvents TreeView1 As TreeView
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
 End Class
