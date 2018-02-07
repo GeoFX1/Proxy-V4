@@ -37,8 +37,8 @@ Partial Class Form1
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pnlMenuDisplay = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.lblName = New System.Windows.Forms.Label()
+        Me.picLogo = New System.Windows.Forms.PictureBox()
         Me.pnlConnect.SuspendLayout()
         Me.pnlSettings.SuspendLayout()
         Me.pnlUpdate.SuspendLayout()
@@ -47,7 +47,7 @@ Partial Class Form1
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlMenuDisplay.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlConnect
@@ -183,33 +183,33 @@ Partial Class Form1
         '
         'pnlMenuDisplay
         '
-        Me.pnlMenuDisplay.Controls.Add(Me.Label1)
-        Me.pnlMenuDisplay.Controls.Add(Me.PictureBox3)
+        Me.pnlMenuDisplay.Controls.Add(Me.lblName)
+        Me.pnlMenuDisplay.Controls.Add(Me.picLogo)
         Me.pnlMenuDisplay.Location = New System.Drawing.Point(-1, 55)
         Me.pnlMenuDisplay.Name = "pnlMenuDisplay"
         Me.pnlMenuDisplay.Size = New System.Drawing.Size(503, 222)
         Me.pnlMenuDisplay.TabIndex = 8
         '
-        'Label1
+        'lblName
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Lucida Sans Typewriter", 16.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(134, 172)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(233, 25)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Geo Network Tools"
+        Me.lblName.AutoSize = True
+        Me.lblName.Font = New System.Drawing.Font("Lucida Sans Typewriter", 16.0!, System.Drawing.FontStyle.Bold)
+        Me.lblName.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblName.Location = New System.Drawing.Point(134, 172)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(233, 25)
+        Me.lblName.TabIndex = 1
+        Me.lblName.Text = "Geo Network Tools"
         '
-        'PictureBox3
+        'picLogo
         '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(169, 5)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(158, 154)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 0
-        Me.PictureBox3.TabStop = False
+        Me.picLogo.Image = CType(resources.GetObject("picLogo.Image"), System.Drawing.Image)
+        Me.picLogo.Location = New System.Drawing.Point(169, 5)
+        Me.picLogo.Name = "picLogo"
+        Me.picLogo.Size = New System.Drawing.Size(158, 154)
+        Me.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picLogo.TabIndex = 0
+        Me.picLogo.TabStop = False
         '
         'Form1
         '
@@ -243,7 +243,7 @@ Partial Class Form1
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlMenuDisplay.ResumeLayout(False)
         Me.pnlMenuDisplay.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -263,6 +263,6 @@ Partial Class Form1
     Friend WithEvents Label6 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents pnlMenuDisplay As Panel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents lblName As Label
+    Friend WithEvents picLogo As PictureBox
 End Class

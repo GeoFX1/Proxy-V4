@@ -44,10 +44,12 @@ Partial Class Connect
         Me.txtManual = New System.Windows.Forms.TextBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.picConnectionStatus, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblCounter
@@ -188,6 +190,7 @@ Partial Class Connect
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.PictureBox1)
         Me.GroupBox1.Controls.Add(Me.lblPingms)
         Me.GroupBox1.Location = New System.Drawing.Point(3, 7)
         Me.GroupBox1.Name = "GroupBox1"
@@ -259,6 +262,17 @@ Partial Class Connect
         Me.GroupBox2.TabIndex = 49
         Me.GroupBox2.TabStop = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(254, 82)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(18, 18)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 48
+        Me.PictureBox1.TabStop = False
+        '
         'Connect
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -289,6 +303,7 @@ Partial Class Connect
         CType(Me.picConnectionStatus, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -314,4 +329,5 @@ Partial Class Connect
     Friend WithEvents txtManual As TextBox
     Friend WithEvents Button2 As Button
     Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

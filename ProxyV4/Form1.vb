@@ -1,5 +1,19 @@
 ﻿Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim DispMenu0 As New Connect
+        pnlMenuDisplay.Controls.Add(DispMenu0)
+
+        Dim DispMenu1 As New Settings
+        pnlMenuDisplay.Controls.Add(DispMenu1)
+
+        Dim DispMenu2 As New Help
+        pnlMenuDisplay.Controls.Add(DispMenu2)
+
+        Dim DispMenu3 As New Update
+        pnlMenuDisplay.Controls.Add(DispMenu3)
+
+        Dim DispMenu4 As New Console
+        pnlMenuDisplay.Controls.Add(DispMenu4)
 
     End Sub
 
@@ -152,9 +166,7 @@
 #Region "Tab Control"
     'Connect
     Private Sub pnlConnect_Click(sender As Object, e As EventArgs) Handles pnlConnect.Click
-        Dim Display As New Connect
-        pnlMenuDisplay.Controls.Clear()
-        pnlMenuDisplay.Controls.Add(Display)
+        HandleMouseClickActions("connect")
 
         UserSelectedMenu = "connect"
         pnlConnect.BackColor = Color.FromArgb(45, 45, 48)
@@ -164,9 +176,7 @@
         pnlConsole.BackColor = Color.FromArgb(63, 63, 70)
     End Sub
     Private Sub lblConnect_Click(sender As Object, e As EventArgs) Handles lblConnect.Click
-        Dim Display As New Connect
-        pnlMenuDisplay.Controls.Clear()
-        pnlMenuDisplay.Controls.Add(Display)
+        HandleMouseClickActions("connect")
 
         UserSelectedMenu = "connect"
         pnlConnect.BackColor = Color.FromArgb(45, 45, 48)
@@ -177,9 +187,7 @@
     End Sub
     'Settings
     Private Sub pnlSettings_Click(sender As Object, e As EventArgs) Handles pnlSettings.Click
-        Dim Display As New Settings
-        pnlMenuDisplay.Controls.Clear()
-        pnlMenuDisplay.Controls.Add(Display)
+        HandleMouseClickActions("setting")
 
         UserSelectedMenu = "settings"
         pnlConnect.BackColor = Color.FromArgb(63, 63, 70)
@@ -189,9 +197,7 @@
         pnlConsole.BackColor = Color.FromArgb(63, 63, 70)
     End Sub
     Private Sub lblSettings_Click(sender As Object, e As EventArgs) Handles lblSettings.Click
-        Dim Display As New Settings
-        pnlMenuDisplay.Controls.Clear()
-        pnlMenuDisplay.Controls.Add(Display)
+        HandleMouseClickActions("setting")
 
         UserSelectedMenu = "settings"
         pnlConnect.BackColor = Color.FromArgb(63, 63, 70)
@@ -202,9 +208,7 @@
     End Sub
     'Update
     Private Sub pnlUpdate_Click(sender As Object, e As EventArgs) Handles pnlUpdate.Click
-        Dim Display As New Update
-        pnlMenuDisplay.Controls.Clear()
-        pnlMenuDisplay.Controls.Add(Display)
+        HandleMouseClickActions("update")
 
         UserSelectedMenu = "update"
         pnlConnect.BackColor = Color.FromArgb(63, 63, 70)
@@ -214,9 +218,7 @@
         pnlConsole.BackColor = Color.FromArgb(63, 63, 70)
     End Sub
     Private Sub lblUpdate_Click(sender As Object, e As EventArgs) Handles lblUpdate.Click
-        Dim Display As New Update
-        pnlMenuDisplay.Controls.Clear()
-        pnlMenuDisplay.Controls.Add(Display)
+        HandleMouseClickActions("update")
 
         UserSelectedMenu = "update"
         pnlConnect.BackColor = Color.FromArgb(63, 63, 70)
@@ -227,9 +229,7 @@
     End Sub
     'Help
     Private Sub pnlHelp_Click(sender As Object, e As EventArgs) Handles pnlHelp.Click
-        Dim Display As New Help
-        pnlMenuDisplay.Controls.Clear()
-        pnlMenuDisplay.Controls.Add(Display)
+        HandleMouseClickActions("help")
 
         UserSelectedMenu = "help"
         pnlConnect.BackColor = Color.FromArgb(63, 63, 70)
@@ -239,9 +239,7 @@
         pnlConsole.BackColor = Color.FromArgb(63, 63, 70)
     End Sub
     Private Sub lblHelp_Click(sender As Object, e As EventArgs) Handles lblHelp.Click
-        Dim Display As New Help
-        pnlMenuDisplay.Controls.Clear()
-        pnlMenuDisplay.Controls.Add(Display)
+        HandleMouseClickActions("help")
 
         UserSelectedMenu = "help"
         pnlConnect.BackColor = Color.FromArgb(63, 63, 70)
@@ -252,9 +250,7 @@
     End Sub
     'Console
     Private Sub pnlConsole_Click(sender As Object, e As EventArgs) Handles pnlConsole.Click
-        Dim Display As New Console
-        pnlMenuDisplay.Controls.Clear()
-        pnlMenuDisplay.Controls.Add(Display)
+        HandleMouseClickActions("console")
 
         UserSelectedMenu = "console"
         pnlConnect.BackColor = Color.FromArgb(63, 63, 70)
@@ -264,9 +260,7 @@
         pnlConsole.BackColor = Color.FromArgb(45, 45, 48)
     End Sub
     Private Sub lblConsole_Click(sender As Object, e As EventArgs) Handles lblConsole.Click
-        Dim Display As New Console
-        pnlMenuDisplay.Controls.Clear()
-        pnlMenuDisplay.Controls.Add(Display)
+        HandleMouseClickActions("console")
 
         UserSelectedMenu = "console"
         pnlConnect.BackColor = Color.FromArgb(63, 63, 70)
@@ -275,5 +269,47 @@
         pnlHelp.BackColor = Color.FromArgb(63, 63, 70)
         pnlConsole.BackColor = Color.FromArgb(45, 45, 48)
     End Sub
+
+    Private Sub pnlMenuDisplay_Paint(sender As Object, e As PaintEventArgs) Handles pnlMenuDisplay.Paint
+
+    End Sub
 #End Region
+
+    Public Sub HandleMouseClickActions(ByVal MenuType As String)
+
+        picLogo.Hide()
+        lblName.Hide()
+
+        'Hide the display before showing to code, this prevents control(0) from overriding everything.
+        pnlMenuDisplay.Controls(0).Hide()
+        pnlMenuDisplay.Controls(1).Hide()
+        pnlMenuDisplay.Controls(2).Hide()
+        pnlMenuDisplay.Controls(3).Hide()
+        pnlMenuDisplay.Controls(4).Hide()
+
+        'Connect Control
+        If MenuType = "connect" Then
+            pnlMenuDisplay.Controls(0).Show()
+        End If
+
+        'Setting Control
+        If MenuType = "setting" Then
+            pnlMenuDisplay.Controls(1).Show()
+        End If
+
+        'Help Control
+        If MenuType = "help" Then
+            pnlMenuDisplay.Controls(2).Show()
+        End If
+
+        'Update Control
+        If MenuType = "update" Then
+            pnlMenuDisplay.Controls(3).Show()
+        End If
+
+        'Console Control
+        If MenuType = "console" Then
+            pnlMenuDisplay.Controls(4).Show()
+        End If
+    End Sub
 End Class

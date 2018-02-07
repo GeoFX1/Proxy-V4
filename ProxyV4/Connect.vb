@@ -17,13 +17,6 @@ Public Class Connect
     End Sub
 
     Private Sub Connect_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Display IP Address
-        Dim req As HttpWebRequest = WebRequest.Create("https://tools.feron.it/php/ip.php")
-        Dim res As HttpWebResponse = req.GetResponse()
-        Dim stream As Stream = res.GetResponseStream
-
-        Dim sr As New StreamReader(stream)
-        lblIPAddress.Text = sr.ReadToEnd()
 
         If My.Computer.Network.IsAvailable Then
             lblNetwork.Text = "Ready To Connect..."
@@ -48,5 +41,13 @@ Public Class Connect
         'Upon leaving, if the text box has nothing in it change text back to IP Address
     End Sub
 
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        'Displays IP Address
+        Dim req As HttpWebRequest = WebRequest.Create("https://tools.feron.it/php/ip.php")
+        Dim res As HttpWebResponse = req.GetResponse()
+        Dim stream As Stream = res.GetResponseStream
 
+        Dim sr As New StreamReader(stream)
+        lblIPAddress.Text = sr.ReadToEnd()
+    End Sub
 End Class
