@@ -3,7 +3,11 @@ Imports System.IO
 
 Public Class Connect
     Private Sub Timer1_Tick_1(sender As Object, e As EventArgs) Handles Timer1.Tick
-        lblCounter.Text = lblCounter.Text + 1
+        Dim Uptime As String
+        Dim ShowVal As String
+        Uptime = lblCounter.Text + 1
+        ShowVal = Uptime & "s"
+        lblCounter.Text = ShowVal
     End Sub
 
     Private Sub btnConnect_Click(sender As Object, e As EventArgs) Handles btnConnect.Click
@@ -13,7 +17,7 @@ Public Class Connect
 
     Private Sub btnDisconnect_Click_1(sender As Object, e As EventArgs) Handles btnDisconnect.Click
         Timer1.Stop()
-        lblCounter.Text = "0"
+        lblCounter.Text = "0s"
     End Sub
 
     Private Sub Connect_Load(sender As Object, e As EventArgs) Handles MyBase.Load

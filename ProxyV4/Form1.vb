@@ -276,10 +276,6 @@
 #End Region
 
     Public Sub HandleMouseClickActions(ByVal MenuType As String)
-
-        picLogo.Hide()
-        lblName.Hide()
-
         'Hide the display before showing to code, this prevents control(0) from overriding everything.
         pnlMenuDisplay.Controls(0).Hide()
         pnlMenuDisplay.Controls(1).Hide()
