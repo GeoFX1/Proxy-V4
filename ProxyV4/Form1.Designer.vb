@@ -37,8 +37,8 @@ Partial Class Form1
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pnlMenuDisplay = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.pnlConnect.SuspendLayout()
         Me.pnlSettings.SuspendLayout()
         Me.pnlUpdate.SuspendLayout()
@@ -190,16 +190,6 @@ Partial Class Form1
         Me.pnlMenuDisplay.Size = New System.Drawing.Size(503, 222)
         Me.pnlMenuDisplay.TabIndex = 8
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(169, 5)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(158, 154)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 0
-        Me.PictureBox3.TabStop = False
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -210,6 +200,16 @@ Partial Class Form1
         Me.Label1.Size = New System.Drawing.Size(233, 25)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Geo Network Tools"
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(169, 5)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(158, 154)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 0
+        Me.PictureBox3.TabStop = False
         '
         'Form1
         '

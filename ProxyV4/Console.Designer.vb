@@ -35,7 +35,7 @@ Partial Class Console
         'PictureBox4
         '
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(18, 29)
+        Me.PictureBox4.Location = New System.Drawing.Point(8, 19)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(85, 85)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -62,7 +62,7 @@ Partial Class Console
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(109, 32)
+        Me.Label2.Location = New System.Drawing.Point(100, 24)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(123, 13)
         Me.Label2.TabIndex = 33
@@ -71,7 +71,7 @@ Partial Class Console
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(114, 45)
+        Me.Label3.Location = New System.Drawing.Point(105, 37)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(138, 13)
         Me.Label3.TabIndex = 34
@@ -80,7 +80,7 @@ Partial Class Console
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(114, 58)
+        Me.Label4.Location = New System.Drawing.Point(105, 50)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(122, 13)
         Me.Label4.TabIndex = 35
